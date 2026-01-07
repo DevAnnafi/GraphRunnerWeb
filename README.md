@@ -8,7 +8,7 @@ A challenging web-based game where you navigate through dynamic obstacles using 
 
 ## 🚀 Features
 
-- **10 Progressively Challenging Levels** - Each level introduces new enemies and obstacles
+- **30 Progressively Challenging Levels** - Each level introduces new enemies and obstacles
 - **Intelligent AI Enemies** - Red enemies use Dijkstra's pathfinding algorithm to hunt you
 - **Rail Enemies** - Orange enemies patrol predefined paths
 - **Safe Zones** - Green areas where enemies can't harm you
@@ -114,8 +114,6 @@ graph-runner-nextjs/
 │   │   ├── globals.css
 │   │   ├── layout.js
 │   │   └── page.js
-│   └── components/
-│       └── GraphRunner.jsx
 ├── package.json
 ├── tailwind.config.js
 └── README.md

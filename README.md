@@ -141,20 +141,75 @@ Each level has configurable:
 - **Safe Zones** - Position and size
 - **Checkpoints** - Position and unique IDs
 
-## 🎮 Level Progression
+### 🧩 Handcrafted Levels (1–10)
+
+The first 10 levels are manually tuned to teach mechanics, movement discipline, and safe-zone usage.
 
 | Level | Adaptive Enemies | Rail Enemies | Checkpoints | Difficulty |
-|-------|-----------------|--------------|-------------|------------|
-| 1     | 1               | 1            | 1           | ⭐         |
-| 2     | 2               | 1            | 1           | ⭐⭐       |
-| 3     | 3               | 2            | 2           | ⭐⭐       |
-| 4     | 4               | 3            | 3           | ⭐⭐⭐     |
-| 5     | 5               | 3            | 3           | ⭐⭐⭐     |
-| 6     | 6               | 4            | 4           | ⭐⭐⭐⭐   |
-| 7     | 7               | 4            | 5           | ⭐⭐⭐⭐   |
-| 8     | 8               | 5            | 6           | ⭐⭐⭐⭐⭐ |
-| 9     | 9               | 5            | 7           | ⭐⭐⭐⭐⭐ |
-| 10    | 10              | 6            | 8           | ⭐⭐⭐⭐⭐ |
+|------:|------------------|--------------|-------------|------------|
+| 1     | 1 | 1 | 1 | ⭐ |
+| 2     | 2 | 1 | 1 | ⭐⭐ |
+| 3     | 3 | 2 | 2 | ⭐⭐ |
+| 4     | 4 | 3 | 3 | ⭐⭐⭐ |
+| 5     | 5 | 3 | 3 | ⭐⭐⭐ |
+| 6     | 6 | 4 | 4 | ⭐⭐⭐⭐ |
+| 7     | 7 | 4 | 5 | ⭐⭐⭐⭐ |
+| 8     | 8 | 5 | 6 | ⭐⭐⭐⭐⭐ |
+| 9     | 9 | 5 | 7 | ⭐⭐⭐⭐⭐ |
+| 10    | 10 | 6 | 8 | ⭐⭐⭐⭐⭐ |
+
+These levels introduce:
+- Dijkstra-based enemy pursuit
+- Rail-based movement patterns
+- Checkpoint chaining and combo multipliers
+- Safe-zone positioning and respawn strategy
+
+---
+
+### 🔁 Procedural Scaling Levels (11–29)
+
+Levels 11–29 are generated dynamically using a difficulty curve that scales:
+
+- Enemy count
+- Enemy speed
+- Rail density
+- Checkpoint count
+- Safe-zone size
+- Time pressure
+
+| Level Range | Adaptive Enemies | Rail Enemies | Checkpoints | Difficulty |
+|-------------|------------------|--------------|-------------|------------|
+| 11–13 | 10–11 | 6–7 | 8 | ⭐⭐⭐⭐⭐ |
+| 14–16 | 11 | 7 | 8–9 | ⭐⭐⭐⭐⭐ |
+| 17–19 | 11–12 | 7 | 9 | ⭐⭐⭐⭐⭐⭐ |
+| 20–22 | 12 | 8 | 9 | ⭐⭐⭐⭐⭐⭐ |
+| 23–25 | 12 | 8 | 9 | ⭐⭐⭐⭐⭐⭐⭐ |
+| 26–29 | 12 | 8 | 9 | ⭐⭐⭐⭐⭐⭐⭐ |
+
+These levels emphasize:
+- Route optimization under pressure
+- Predictive movement against pathfinding enemies
+- Efficient checkpoint chaining for score multipliers
+- Precision positioning with shrinking safe zones
+
+---
+
+### 🔥 Final Challenge — Level 30
+
+**Level 30 is intentionally designed as an “impossible but doable” skill check.**
+
+| Level | Adaptive Enemies | Rail Enemies | Checkpoints | Difficulty |
+|------:|------------------|--------------|-------------|------------|
+| 30 | 15–18 | 9–10 | 9 | ⭐⭐⭐⭐⭐⭐⭐⭐ |
+
+**What makes Level 30 different:**
+- Extreme enemy density
+- Minimal safe-zone margin
+- High-speed pursuit and overlapping rail patterns
+- Tight time constraints
+- No randomness — success is entirely execution- and strategy-based
+
+---
 
 ## 🐛 Troubleshooting
 

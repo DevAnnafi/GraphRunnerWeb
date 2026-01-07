@@ -592,12 +592,25 @@ const GraphRunner = () => {
     game.safeZones = config.safeZones;
     game.checkpoints = config.checkpoints;
 
-    // Reset player and spawns
-    game.player.x = 70;
-    game.player.y = 70;
+    // Reset player - spawn in first safe zone (centered, but ensure it fits)
+    const firstSafeZone = config.safeZones[0] || { x: 50, y: 50, width: 70, height: 50 };
+    const padding = game.player.radius + 2; // Add small padding
+    const spawnX = clamp(
+      firstSafeZone.x + firstSafeZone.width / 2,
+      firstSafeZone.x + padding,
+      firstSafeZone.x + firstSafeZone.width - padding
+    );
+    const spawnY = clamp(
+      firstSafeZone.y + firstSafeZone.height / 2,
+      firstSafeZone.y + padding,
+      firstSafeZone.y + firstSafeZone.height - padding
+    );
+    
+    game.player.x = spawnX;
+    game.player.y = spawnY;
     game.player.vx = 0;
     game.player.vy = 0;
-    game.lastSafeSpawn = { x: 70, y: 70 };
+    game.lastSafeSpawn = { x: spawnX, y: spawnY };
 
     // Reset effects
     game.invulnUntil = 0;
